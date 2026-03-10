@@ -1,0 +1,32 @@
+go to file-new-maven project-next-in filter type-org.apche.maven-artifact id-maven-archetype-quickstart-1.5-it should be 1.5 if not restart the eclipse
+there give groupid:example1 artifact id:example1-next-console will open-type Y we can see BUILD SUCCESS and folder in corner
+go to example1-pom.xml-go to 33 line
+go to chrome-maven repo-in search-type-simple json-select 1st link-go to lastest versions-select 1.1.1-scroll down-copy code inside dependency-paste it to 33 line-save
+select example1-right click-new-folder-name it as -jsonfile
+select example1-right click-new-file-name it as-emp.json
+type under emp.json
+{
+"firstname":"thrisha",
+"lastname":"gowda"
+}
+select src/text/java-select-new-class-example1-finish
+then write code
+package example1.example1;
+import java.io.FileReader;
+import java.io.IOExpection;
+import java.text.ParseException;
+import org.json.simple.JSONIObject;
+import org.json.simple.parser.JSONParser;
+public class Example1{
+public static void main(String[] args)throws IOException,ParseException,org.json.simple.parse.ParseException{
+JSONParser jsonparser=new JSONParser();
+FileReader filereader=new FileReadeer(".\\jsonfile\\emp.json");
+Object obj=jsonparser.parse(filereader);
+JSONObject empobj=(JSONObject)obj;
+String fname=(String)empobj.get("firstname");
+String lname=(String)empobj.get("lastname");
+System.out.println("Firstname:"+fname);
+System.out.println("lastname:"+lname);
+}
+}
+run
