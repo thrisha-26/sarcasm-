@@ -1,0 +1,29 @@
+got to github
+search "add two numbers"
+select fork
+then rename repo name as 'add'-create fork-copy url 
+go to git bash
+$cd ..
+$git clone 
+$cd add
+$git init
+$git branch f1
+$git checkout f1
+$nano file1.txt-"hello"
+$git add file1.txt
+$git commit -m"file1"
+$nano file2.txt
+$git add file2.txt
+$git commit -m"file2"
+$git checkout main
+$git  merge f1
+$nano file.txt
+$git add first.txt
+$git commit -m"first"
+$git checkout f1
+$nano first.txt
+$git add first.txt
+$git commit -m"firstfi"
+$git checkout main
+$git merge f1
+$git diff first.txt
