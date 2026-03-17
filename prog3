@@ -1,17 +1,19 @@
 3rd program (jenkins)
 github : create new repo(test) copy the link 
-vs code :write simple java(myfile.java) code put it inside github repo file c:....../test
+vs code :write simple java(myfile.java) code put it inside github repo file c:....../pro
           git bash: cd "path"
           git clone " http:/....../test"
-          cd test
+          cd pro
+          git config --global user.email
+          git config --global user.name
           git add myfile.java
           git commit -m "done"
           git push
-jenkins:new item :test
+jenkins:new item :pro
         choose frestyle ->ok
-        souce code manager :git 
-                            change to main
+        souce code manager :git ->paste url from git
+                            master change to main
                             choose hook(optional)
                             build steps (execute windows... code(javac myfile.java)
                             save
-        build now : correct marks
+        build now : green marks
