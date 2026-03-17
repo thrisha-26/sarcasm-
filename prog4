@@ -1,7 +1,11 @@
-go to file->new->maven project->next->in filter type->org.apche.maven->artifact id->maven-archetype-quickstart-1.5->it should be 1.5 if not restart the eclipse
-there give groupid:example1 and artifact id:example1->next->console will open->type Y we can see BUILD SUCCESS and folder in corner
+go to file->new->maven project->next->in filter type->
+org.apche.maven->artifact id->maven-archetype-quickstart-1.5->
+it should be 1.5 if not restart the eclipse
+there give groupid:example1 and artifact id:example1->next->
+console will open->type Y we can see BUILD SUCCESS and folder in corner
 go to example1->pom.xml->go to 33 line
-go to chrome->maven repo->in search->type->simple json->select 1st link->go to lastest versions->select 1.1.1->scroll down->copy code inside dependency->paste it to 33 line->save
+go to chrome->maven repo->in search->type->simple json->select 1st link->
+go to lastest versions->select 1.1.1->scroll down->copy code inside dependency->paste it to 33 line->save
 select example1->right click->new->folder->name it as ->jsonfile
 select example1->right click->new->file->name it as->emp.json
 type under emp.json
@@ -9,7 +13,8 @@ type under emp.json
 "firstname":"thrisha",
 "lastname":"gowda"
 }
-select src/text/java-select-new-class-example1-finish
+select src/text/java->select->new->class->example1->finish
+
 then write code
 package example1.example1;
 import java.io.FileReader;
