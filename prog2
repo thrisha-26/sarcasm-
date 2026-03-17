@@ -1,11 +1,11 @@
 got to github
 search "add two numbers"
 select fork
-then rename repo name as 'add'-create fork-copy url 
+then rename repo name as 'Add'-create fork-copy url 
 go to git bash
 $cd ..
 $git clone 
-$cd add
+$cd Add
 $git init
 $git branch f1
 $git checkout f1
