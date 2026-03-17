@@ -1,4 +1,3 @@
-3rd program (jenkins)
 github : create new repo(test) copy the link 
 vs code :write simple java(myfile.java) code put it inside github repo file c:....../pro
           git bash: cd "path"
@@ -9,11 +8,12 @@ vs code :write simple java(myfile.java) code put it inside github repo file c:..
           git add myfile.java
           git commit -m "done"
           git push
-jenkins:new item :pro
+jenkins:new item :program
         choose frestyle ->ok
         souce code manager :git ->paste url from git
                             master change to main
                             choose hook(optional)
-                            build steps (execute windows... code(javac myfile.java)
+                            build steps (execute windowscode
+                           (javac myfile.java)
                             save
         build now : green marks
