@@ -1,6 +1,6 @@
 github : create new repo(test) copy the link 
-vs code :write simple java(myfile.java) code put it inside github repo file ro
-          git bash: cd "path"
+vs code :write simple java(myfile.java) code put it inside github repo file ......./test
+git bash: cd "path"
           git clone " http:/....../test"
           cd test
           git config --global user.email
