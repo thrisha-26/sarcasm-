@@ -1,19 +1,22 @@
-github : create new repo(test) copy the link 
-vs code :write simple java(myfile.java) code put it inside github repo file ......./test
-git bash: cd "path"
-          git clone " http:/....../test"
-          cd test
-          git config --global user.email
-          git config --global user.name
-          git add myfile.java
-          git commit -m "done"
-          git push
-jenkins:new item :program
-        choose frestyle ->ok
-        souce code manager :git ->paste url from git
-                            master change to main
-                            choose hook(optional)
-                            build steps (execute windowscode
-                           (javac myfile.java)
-                            save
-        build now : green marks
+go to browser and type slacks
+sign in with email id
+workspace click on VVCE_JOIN
+your name ->a website opens
+go to browser and type install slack on windows
+channels->create channel->#devops_team2->select public-anyone in VVCE->create
+now to go jenkins->manage jenkins->plugins->available plugins->
+search slack notification select and install->restart
+manage jenkins->system(configure global settings and path->scroll down a bit->
+workspace->go back to the slack copy the name->paste to the workspace
+crendital->add->global->secret text
+browser->type this https://my.slack.com/services/new/jenkins_ci
+post to channel->create channel->select devops_team2->add jenkin ci integration
+scroll down in the instruction website ->step3->copy integration token credential id
+paste it to secret->id write jenkins name->description notify->create
+in credential make null to notify
+default channel ->devops_team2->apply->save
+new item ->give name->freestyle->ok->build step->give command as
+java --version'
+port build action->add->slack notification->notify built stack,notify succes,notify every fallen 
+select apply->save
+build now
