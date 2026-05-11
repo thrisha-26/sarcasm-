@@ -1,22 +1,25 @@
-create new folder 'Devops'
-go inside and copy the address
-open gitbash
-$cd ..
-create github repository and copy the address
-$git clone https://..
-$git init
-$cd prog1
-$nano first.txt
-$git config --global user.email ...
-$git config --global user.name ...
-$git add first.txt
-$git add .
-$git commit -m "first file"
-$git status
-$git push
-go to github->click prog1->edit option->put messages put"hello everyone"->commit changes
-$git pull
-$nano first.txt ->134567
-$git reset --hard
-$nano first.txt
-$git log
+go to devops folder->inside that create a new file called 'Dockerfile'
+inside we want 'dockerfile' and 'sample'
+in vs code ->dockerfile
+ FROM Python
+ WORKDIR /app
+ COPY . /  app
+ CMD ["Python","sample.py"]
+in vs code ->sample.py
+print("hello")           while saving these choose the "no extension" option
+now in the terminal type
+ docker build -t test1 .
+ docker run test1
+ docker run --name con1 test1
+if we go and see in docker desktop then we can see con1 and image test1 
+run it
+------now pushing the dockerfile to dockerhub
+go to docker desktop->container/image->con4->there we can see container id->copy it/-/
+copy the image tag by clicking on test1 and copying the image tag
+test1:latest
+ch32343vhgf->copy this
+go to sample.py->terminal->
+ docker tag <..id...>                          | docker image tag<...id...><username>/test1
+ docker thrisha-26/test1                       | docker push <username>/test1:latest
+ docker push docker.io/thrisha-26/test1:latest |
+we can go and see in hub->repositories->there we can see the test1
