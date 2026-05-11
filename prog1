@@ -6,7 +6,7 @@ in vs code ->dockerfile
  COPY . /  app
  CMD ["Python","sample.py"]
 in vs code ->sample.py
-print("hello")           while saving these choose the "no extension" option
+ print("hello")           while saving these choose the "no extension" option
 now in the terminal type
  docker build -t test1 .
  docker run test1
