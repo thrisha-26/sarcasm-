@@ -4,6 +4,15 @@ $cd student-A
 $cd Desktop
 $cd Devops
 $git clone ......url..........
+
+go to devops folder->inside that create a new file called 'Dockerfile'
+inside we want 'dockerfile' and 'sample'
+in vs code ->dockerfile
+ FROM Python
+ WORKDIR /app
+ COPY . /  app
+ CMD ["Python","sample.py"]
+now commit and push the changes to the repository 
 $git add
 $git commit -m "dockerfile"
-open vs code and create
+$git push
