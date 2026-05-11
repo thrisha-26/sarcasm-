@@ -5,18 +5,21 @@ your name ->a website opens
 go to browser and type install slack on windows
 channels->create channel->#devops_team2->select public-anyone in VVCE->create
 now to go jenkins->manage jenkins->plugins->available plugins->
-search slack notification select and install->restart
-manage jenkins->system(configure global settings and path->scroll down a bit->
+search "slack notification"select and install->restart
+manage jenkins->system->scroll down a bit->there u can slack
 workspace->go back to the slack copy the name->paste to the workspace
-crendital->add->global->secret text
-browser->type this https://my.slack.com/services/new/jenkins_ci
-post to channel->create channel->select devops_team2->add jenkin ci integration
-scroll down in the instruction website ->step3->copy integration token credential id
+crendital->add there u select ->domain-same(global),kind->secret text,id->
+browser->type this https://my.slack.com/services/new/jenkins-ci->
+---------------else u can go for installed plugin "slack notification" click on that
+---------------there choose channel->type your channel name-#devopsprog 
+---------------it ill provide u the instructions scroll down to step3------------------|
+post to channel->create channel->select devops_team2->add jenkin ci integration        |
+scroll down in the instruction website ->step3->copy integration token credential id  <-
 paste it to secret->id write jenkins name->description notify->create
 in credential make null to notify
 default channel ->devops_team2->apply->save
 new item ->give name->freestyle->ok->build step->give command as
-java --version'
+java --version
 port build action->add->slack notification->notify built stack,notify succes,notify every fallen 
 select apply->save
 build now
