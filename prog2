@@ -7,12 +7,59 @@ $git clone ......url..........
 
 go to devops folder->inside that create a new file called 'Dockerfile'
 inside we want 'dockerfile' and 'sample'
-in vs code ->dockerfile
- FROM Python
- WORKDIR /app
+in vs code ->dockerfile                                                  same
+ FROM Python                                                            as previous 
+ WORKDIR /app                                                              one
  COPY . /  app
  CMD ["Python","sample.py"]
 now commit and push the changes to the repository 
 $git add
 $git commit -m "dockerfile"
 $git push
+now create a new docker image and container by running the commands below in "git bash"
+ docker build -t test2
+docker run --name cont2 test2
+docker images //list all images present in your local device ------>there copy the id of your image
+test2:latest   32fgcg23 ->copy this
+docker tag ...32fgcg23 ... thrisha-26/test2
+docker push thrisha-26/test2:latest
+now got to jenkins and click on settings->plugins
+update all installed plugins
+make sure to have these plugins installed
+->cloudBees Docker Custom Build Environment
+->Docker
+->Docker Pipelines
+->Docker Compose Buildstep
+jenskins-> new item ->with name 'Doc' ->select pipeline->ok
+then again we have pipeline then select script
+
+pipeline
+{
+agent any
+environment
+{
+dockerImage="        or 'thrisha-26/test2'
+registry='thrisha-26/test2'
+registryCredential='jenkin_docker_token'
+}
+stages{
+stage('Checkout')
+{
+steps
+{
+checkout scmGit(branches:[[name:'*/main']],extensions:[],
+userRemoteConfigs:[[url:'https://github.com/thrisha-26/dockerprog.git]]
+}
+}
+stage('Build Docker image')
+{
+steps{
+script{
+dockerImage=docker.build.registry
+}
+}
+}
+}
+}
+click on save and find the build no button on the left sidebar u can see succes in green color
+script{
