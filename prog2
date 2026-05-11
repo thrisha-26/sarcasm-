@@ -12,6 +12,7 @@ in vs code ->dockerfile                                                  same
  WORKDIR /app                                                              one
  COPY . /  app
  CMD ["Python","sample.py"]
+
 now commit and push the changes to the repository 
 $git add
 $git commit -m "dockerfile"
